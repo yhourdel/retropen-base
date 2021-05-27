@@ -41,7 +41,9 @@
       </div>
     <% end %>
 
+    <%= render partial: 'layouts/application_v2/search' %>
     <%= render partial: 'layouts/application_v2/footer' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <%= javascript_pack_tag 'application_v2' %>
   </body>
 </html>

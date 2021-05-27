@@ -1,0 +1,15 @@
+.modal {
+    backdrop-filter: blur(10px);
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+
+.modal-dialog {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.41);
+}
+
+.modal-content {
+    overflow: hidden;
+}
