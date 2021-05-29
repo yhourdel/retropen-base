@@ -17,11 +17,14 @@
       <div class="modal-body" :class="{ 'p-0': !isResult }">
         <div class="search-result" v-show="isResult">
           <transition-group
-            name="staggered-fade"
+            name="fade"
             tag="div"
           >
-            <a :href="elem.url" v-for="elem in articleObj" v-bind:key="elem.id" class="search-result-link" v-html="elem.html">
-            </a>
+            <section v-for="(result, type) in articleObj" v-bind:key="type" class="search-result-section">
+              <h5>{{ type }}</h5>
+              <a :href="link.url" v-for="link in result" v-bind:key="link.id" class="search-result-link" v-html="link.html">
+              </a>
+            </section>
           </transition-group>
         </div>
       </div>
